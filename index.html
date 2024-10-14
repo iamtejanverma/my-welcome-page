@@ -3,16 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome to My Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <title>Tejan Verma | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .skills, .projects, .contact {
+      margin-top: 40px;
+    }
+    .skills ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills li {
+      background-color: #4CAF50;
+      color: white;
+      display: inline-block;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .projects img {
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <h1>Tejan Verma | Software Developer</h1>
+    <p>Welcome to my portfolio website. Here you can find details about my work, skills, and projects.</p>
+  </header>
+
   <div class="container">
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple, clean webpage to get started. Stay tuned for more exciting content!</p>
-    <button onclick="window.location.href='#';">Explore More</button>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Tejan, a passionate software developer specializing in web and mobile development.
+        I have a background in machine learning, web technologies, and mobile app development. My goal is to build
+        intuitive, dynamic, and user-friendly applications.
+      </p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Python</li>
+        <li>Machine Learning</li>
+        <li>Android Development</li>
+        <li>ASP.NET</li>
+        <li>Cloud Platforms (AWS, GCP)</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <p>Here are a few projects I've worked on:</p>
+      <ul>
+        <li><a href="#">Project 1: AI-based Maize Phenotype Analyzer</a></li>
+        <li><a href="#">Project 2: Android Business Card App</a></li>
+        <li><a href="#">Project 3: Web-based Chatbot using LLM</a></li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to <a href="mailto:tejan@example.com">send me an email</a>.</p>
+    </section>
   </div>
+
+  <footer>
+    <p>&copy; 2024 Tejan Verma. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
