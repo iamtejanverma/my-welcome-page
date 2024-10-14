@@ -6,80 +6,176 @@
   <title>Tejan Verma | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Base Styles */
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
       background-color: #f4f4f4;
       color: #333;
     }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .skills, .projects, .contact {
-      margin-top: 40px;
-    }
-    .skills ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    .skills li {
-      background-color: #4CAF50;
-      color: white;
-      display: inline-block;
-      padding: 10px;
-      margin: 5px;
-      border-radius: 5px;
-    }
-    .projects img {
-      max-width: 100%;
-      height: auto;
-    }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
+
     a {
       color: #4CAF50;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* About Section */
+    .about, .skills, .projects, .contact {
+      margin-bottom: 40px;
+    }
+
+    .about p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Skills Section */
+    .skills ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .skills li {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 1.1em;
+    }
+
+    /* Projects Section */
+    .projects ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .projects ul li {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .projects img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* Contact Section */
+    .contact a {
+      font-size: 1.2em;
+      background-color: #4CAF50;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+    }
+
+    .contact a:hover {
+      background-color: #45a049;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+
+      .about p {
+        font-size: 1.1em;
+      }
+
+      .projects ul li {
+        font-size: 1.1em;
+      }
+
+      .contact a {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 15px;
+      }
+
+      .skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about p {
+        font-size: 1em;
+      }
+
+      .projects ul li {
+        font-size: 1em;
+      }
+
+      .contact a {
+        font-size: 1em;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <header>
     <h1>Tejan Verma | Software Developer</h1>
-    <p>Welcome to my portfolio website. Here you can find details about my work, skills, and projects.</p>
+    <p>Welcome to my portfolio website. Explore my projects, skills, and background below.</p>
   </header>
 
   <div class="container">
     <section class="about">
       <h2>About Me</h2>
       <p>
-        Hi! I'm Tejan, a passionate software developer specializing in web and mobile development.
-        I have a background in machine learning, web technologies, and mobile app development. My goal is to build
-        intuitive, dynamic, and user-friendly applications.
+        Hello! I'm Tejan, a software developer passionate about building web applications, mobile apps, and working with machine learning. 
+        My goal is to create solutions that are both visually appealing and highly functional.
       </p>
     </section>
 
@@ -98,7 +194,6 @@
 
     <section class="projects">
       <h2>Projects</h2>
-      <p>Here are a few projects I've worked on:</p>
       <ul>
         <li><a href="#">Project 1: AI-based Maize Phenotype Analyzer</a></li>
         <li><a href="#">Project 2: Android Business Card App</a></li>
@@ -108,7 +203,7 @@
 
     <section class="contact">
       <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, feel free to <a href="mailto:tejan@example.com">send me an email</a>.</p>
+      <a href="mailto:tejanverma3@gmail.com">Send an Email</a>
     </section>
   </div>
 
