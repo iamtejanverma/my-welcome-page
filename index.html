@@ -3,71 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tejan Verma - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tejan Verma's Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
 </head>
 <body>
     <header>
         <h1>Tejan Verma</h1>
-        <nav>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
-        </nav>
+        <p>Education: [Your Education Info]</p>
+        <p>LinkedIn: <a href="your-linkedin-url" target="_blank">View Profile</a></p>
     </header>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="expandable">
-            <h3>Bachelor of Technology in Computer Science</h3>
-            <p>University Name - 2020 - 2024</p>
-            <p>Additional education details...</p>
-        </div>
-    </section>
-
-    <section id="skills">
+    
+    <section class="skills">
         <h2>Skills</h2>
         <div class="skill-category">
-            <button class="toggle-skill">Machine Learning</button>
-            <div class="sub-skills">
-                <p>Deep Neural Networks</p>
-                <p>Computer Vision</p>
-                <p>Natural Language Processing</p>
-            </div>
+            <h3 class="toggle">Machine Learning</h3>
+            <ul class="hidden">
+                <li>Deep Neural Networks</li>
+                <li>Natural Language Processing</li>
+            </ul>
         </div>
         <div class="skill-category">
-            <button class="toggle-skill">Web Development</button>
-            <div class="sub-skills">
-                <p>HTML, CSS, JavaScript</p>
-                <p>React</p>
-                <p>Node.js</p>
-            </div>
+            <h3 class="toggle">Web Development</h3>
+            <ul class="hidden">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
         </div>
+        <!-- Add more skill categories as needed -->
     </section>
 
-    <section id="projects">
+    <section class="projects">
         <h2>Projects</h2>
         <div class="project-category">
-            <button class="toggle-project">Android App Development</button>
-            <div class="projects">
-                <p>Project 1 - App Description</p>
-                <p>Project 2 - App Description</p>
-            </div>
+            <h3 class="toggle">Android App Development</h3>
+            <ul class="hidden">
+                <li>Project 1: Description</li>
+                <li>Project 2: Description</li>
+            </ul>
         </div>
         <div class="project-category">
-            <button class="toggle-project">Web Development</button>
-            <div class="projects">
-                <p>Project 1 - Web Description</p>
-                <p>Project 2 - Web Description</p>
-            </div>
+            <h3 class="toggle">Web Applications</h3>
+            <ul class="hidden">
+                <li>Project 1: Description</li>
+                <li>Project 2: Description</li>
+            </ul>
         </div>
+        <!-- Add more project categories as needed -->
     </section>
-
-    <footer>
-        <p>&copy; 2024 Tejan Verma</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
