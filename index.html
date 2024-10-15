@@ -4,53 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tejan Verma's Portfolio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <script src="script.js" defer></script> <!-- Link to your JavaScript file -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+        }
+        header {
+            background: linear-gradient(135deg, #4b0082, #5b2e91);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3, h4 {
+            cursor: pointer;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        h2 {
+            color: #4b0082;
+        }
+        h3 {
+            color: #5b2e91;
+        }
+        h4 {
+            color: #9b59b6;
+        }
+        h2:hover, h3:hover, h4:hover {
+            color: #6c3483; /* Darker color on hover */
+        }
+        .hidden {
+            display: none;
+        }
+        .content {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #333;
+        }
+        footer a {
+            color: #4b0082;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #5b2e91;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Tejan Verma</h1>
-        <p>Education: Fairleigh Dickinson University</p>
-        <p>LinkedIn: <a href="www.linkedin.com/in/iamtejanverma" target="_blank">View Profile</a></p>
     </header>
-    
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skill-category">
-            <h3 class="toggle">Machine Learning</h3>
-            <ul class="hidden">
-                <li>Deep Neural Networks</li>
-                <li>Natural Language Processing</li>
-            </ul>
+    <div class="container">
+        <h2 onclick="toggleContent('education')">Education</h2>
+        <div id="education" class="hidden content">
+            <p><strong>Master's in Computer Science</strong> - May 2024</p>
+            <p><strong>Bachelor's in Information Technology</strong> - May 2022</p>
         </div>
-        <div class="skill-category">
-            <h3 class="toggle">Web Development</h3>
-            <ul class="hidden">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-        <!-- Add more skill categories as needed -->
-    </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-category">
-            <h3 class="toggle">Android App Development</h3>
-            <ul class="hidden">
-                <li>Project 1: Description</li>
-                <li>Project 2: Description</li>
-            </ul>
+        <h2 onclick="toggleContent('skills')">Skills</h2>
+        <div id="skills" class="hidden content">
+            <h3 onclick="toggleContent('ml')">Machine Learning</h3>
+            <div id="ml" class="hidden content">
+                <h4 onclick="toggleContent('ml-skills')">Skills</h4>
+                <div id="ml-skills" class="hidden content">
+                    <ul>
+                        <li>Deep Learning Frameworks: TensorFlow, PyTorch</li>
+                        <li>Natural Language Processing Libraries: NLTK, SpaCy</li>
+                        <li>Data Manipulation: Pandas, NumPy</li>
+                        <li>Model Evaluation: Scikit-Learn, Keras</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 onclick="toggleContent('web')">Web Development</h3>
+            <div id="web" class="hidden content">
+                <h4 onclick="toggleContent('js')">JavaScript</h4>
+                <div id="js" class="hidden content">
+                    <ul>
+                        <li>Frameworks: React, Angular, Vue.js</li>
+                        <li>State Management: Redux, Context API</li>
+                        <li>API Integration: REST, GraphQL</li>
+                    </ul>
+                </div>
+                <h4 onclick="toggleContent('aspnet')">ASP.NET</h4>
+                <div id="aspnet" class="hidden content">
+                    <ul>
+                        <li>Frameworks: ASP.NET Core, ASP.NET MVC</li>
+                        <li>Libraries: Entity Framework, ASP.NET Identity</li>
+                        <li>APIs: Developed RESTful APIs with ASP.NET Web API</li>
+                        <li>Testing: Unit testing with xUnit, integration testing with ASP.NET Test Server</li>
+                    </ul>
+                </div>
+                <h4 onclick="toggleContent('python')">Python</h4>
+                <div id="python" class="hidden content">
+                    <ul>
+                        <li>Frameworks: Django, Flask</li>
+                        <li>Libraries: NumPy, Pandas, Scikit-Learn, Matplotlib</li>
+                        <li>Web Frameworks: FastAPI for building APIs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 onclick="toggleContent('cloud')">Cloud Computing</h3>
+            <div id="cloud" class="hidden content">
+                <ul>
+                    <li>Cloud Platforms: AWS, GCP, Azure</li>
+                    <li>Services: EC2, S3, RDS, Lambda (AWS)</li>
+                    <li>CI/CD: Implemented CI/CD pipelines using AWS CodePipeline and CodeDeploy.</li>
+                    <li>Serverless Applications: Developed with AWS Lambda and API Gateway.</li>
+                </ul>
+            </div>
         </div>
-        <div class="project-category">
-            <h3 class="toggle">Web Applications</h3>
-            <ul class="hidden">
-                <li>Project 1: Description</li>
-                <li>Project 2: Description</li>
-            </ul>
+
+        <h2 onclick="toggleContent('projects')">Projects</h2>
+        <div id="projects" class="hidden content">
+            <h3 onclick="toggleContent('android')">Android App Development</h3>
+            <div id="android" class="hidden content">
+                <p><strong>Business Card UI:</strong> A simple Android UI project built with Jetpack Compose, showcasing modern design principles.</p>
+                <p><strong>Fitness Tracker App:</strong> Developed an Android app to track fitness activities, utilizing Firebase for backend support.</p>
+            </div>
+
+            <h3 onclick="toggleContent('web-projects')">Web Development Projects</h3>
+            <div id="web-projects" class="hidden content">
+                <p><strong>Portfolio Website:</strong> Developed a responsive portfolio website using HTML, CSS, and JavaScript, showcasing various projects and skills.</p>
+                <p><strong>Blog Platform:</strong> Created a blogging platform using Django with user authentication, allowing users to create and manage their own blogs.</p>
+            </div>
+
+            <h3 onclick="toggleContent('ml-projects')">Machine Learning Projects</h3>
+            <div id="ml-projects" class="hidden content">
+                <p><strong>Lesion Detection in Maize Leaves:</strong> Implemented a deep learning model to detect and classify lesions in maize leaves.</p>
+                <p><strong>Sentiment Analysis:</strong> Developed a sentiment analysis tool using NLP techniques to analyze product reviews.</p>
+            </div>
         </div>
-        <!-- Add more project categories as needed -->
-    </section>
+
+        <footer>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">View Profile</a></p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
