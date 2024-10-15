@@ -10,9 +10,10 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            color: #333;
         }
         header {
-            background: linear-gradient(135deg, #4b0082, #5b2e91);
+            background: linear-gradient(135deg, #007acc, #005bb5);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -32,16 +33,19 @@
             transition: color 0.3s;
         }
         h2 {
-            color: #4b0082;
+            color: #007acc;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
         }
         h3 {
-            color: #5b2e91;
+            color: #005bb5;
+            padding: 5px 0;
         }
         h4 {
-            color: #9b59b6;
+            color: #004c99;
         }
         h2:hover, h3:hover, h4:hover {
-            color: #6c3483; /* Darker color on hover */
+            color: #004080; /* Darker color on hover */
         }
         .hidden {
             display: none;
@@ -52,6 +56,10 @@
             margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+        .content:hover {
+            background: #e6f0ff; /* Light background on hover */
         }
         footer {
             text-align: center;
@@ -60,12 +68,12 @@
             color: #333;
         }
         footer a {
-            color: #4b0082;
+            color: #007acc;
             text-decoration: none;
             transition: color 0.3s;
         }
         footer a:hover {
-            color: #5b2e91;
+            color: #005bb5;
         }
     </style>
 </head>
